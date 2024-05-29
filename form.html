@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+
+ <script>
+  function sum(){
+   let n1 = document.getElementById("Input1").value;
+   let n2 = document.getElementById("Input2").value;
+   
+   document.getElementById("result").innerText =  parseInt(n1) + parseInt(n2)
+  
+  }
+
+ </script>
+ <script>
+    function sub(){
+        let n1 = document.getElementById("Input1").value;
+        let n2 = document.getElementById("Input2").value;
+
+        document.getElementById("result").innerText =  parseInt(n1) - parseInt(n2)
+
+    }
+ </script>
+ <script>
+    function multiply(){
+        let n1 = document.getElementById("Input1").value;
+        let n2 = document.getElementById("Input2").value;
+
+        document.getElementById("result").innerText =  parseInt(n1) * parseInt(n2)
+
+    }
+ </script>
+
+<script>
+    function mode(){
+        let n1 = document.getElementById("Input1").value;
+        let n2 = document.getElementById("Input2").value;
+
+        document.getElementById("result").innerText =  parseInt(n1) % parseInt(n2)
+
+    }
+ </script>
+
+<script>
+    function expo(){
+        let n1 = document.getElementById("Input1").value;
+        let n2 = document.getElementById("Input2").value;
+
+        document.getElementById("result").innerText =  parseInt(n1) ** parseInt(n2)
+
+    }
+ </script>
+ <script>
+    function Divide(){
+        let n1 = document.getElementById("Input1").value;
+        let n2 = document.getElementById("Input2").value;
+
+        document.getElementById("result").innerText =  parseInt(n1) / parseInt(n2)
+
+    }
+ </script>
+</head>
+<body>
+ <h1 style="margin-left: 380px;">CALULATOR</h1>
+ <div style="background-color:black;color: aliceblue; height: 450px; width: 400px; margin-left: 300px;margin-top: 10px;border-radius: 20px;">
+  <div style="padding: 20px;">
+
+   <label>Enter 1st number</label> <br>
+   <input id="Input1" type="number" value=""> <br>
+
+   <label>Enter 2nd number</label> <br>
+   <input id="Input2" type="number" value=""> <br>
+
+   <h2 id="result">Result: </h2> <br>
+
+   <button onclick=sum()>+</button>
+   <button onclick=sub()>-</button>
+   <button onclick=mutliply()>*</button>
+   <button onclick=mode()>%</button>
+   <button onclick=expo()>**</button>
+   <button onclick=Divide()>/</button>
+  </div>
+ </div>
+</body>
+</html>

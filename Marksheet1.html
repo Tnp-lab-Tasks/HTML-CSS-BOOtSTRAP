@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Marksheet1</title>
+    <script>
+        
+        function sum(){
+        let e = document.getElementById("english").value
+        let s = document.getElementById("science").value
+        let h = document.getElementById("hindi").value
+        let m = document.getElementById("maths").value
+        let c = document.getElementById("computer").value
+
+        //    if(e<30){
+        //     document.getElementById("grade").innerText="Failed in English"
+        //   }
+        //   if (s<30){
+        //     document.getElementById("grade").innerText="Failed in science"
+        //   }
+        //   if (h<30){
+        //     document.getElementById("grade").innerText="Failed in hindi"
+        //   }
+        //   if (m<30){
+        //     document.getElementById("grade").innerText="Failed in maths"
+        //   }
+        //   if (c<30){
+        //     document.getElementById("grade").innerText="Failed in computer"
+        //   }
+
+        let sum=0;
+        sum=parseInt(e)+parseInt(s)+parseInt(h)+parseInt(m)+parseInt(c);
+
+        
+        document.getElementById("marks").innerText= sum 
+        percentage(sum)   
+        }     
+       function percentage(total){
+        let per=total/500*100;
+        document.getElementById("percentage").innerText=(Math.round(per*100)/100)
+        gradeDecide(per);
+       }
+
+       function gradeDecide(per){
+        if(100>per && per>=80){
+            document.getElementById("grade").innerText="Grade A Congratulations"
+        }
+        else if(89>=per && per>=70){
+            document.getElementById("grade").innerText="Grade B Congratulations"
+        }
+        else if(69>=per && per>=60){
+            document.getElementById("grade").innerText="Grade C Congratulations"
+        }
+        else if(59>=per && per>=50){
+            document.getElementById("grade").innerText="Grade D "
+        }
+        else if(39>=per && per>=30){
+            document.getElementById("grade").innerText="Grade E"
+        }
+        else {
+            document.getElementById("grade").innerText="Fail "
+        }
+
+        
+    }
+    </script>
+</head>
+<body>
+    <div class="page"style="background-color:blue;height:720px">
+
+    <div class="conatiner"style="background-color:blue;color:white;padding-left:600px;padding-top:20px;height:80px;font-size:50px;"><h5>Marksheet</h5></div> 
+
+    <div class="box"style="background-color:blue;margin-left:120px;margin-top:20px;height:400px;width:1300px;display:flex;">
+            
+             <div style="height:300px;width:500px;border:10px solid white;margin-top:50px;color: aliceblue;padding-top:50px">
+     
+             <label  style="margin-left: 30px;;">Marks obtained in English :</label>   <input id="english" type="number"  style="margin-left: 30px;"valur=""placeholder="Pls enter marks here"><br><br>
+             <label  style="margin-left: 30px;">Marks obtained in science :</label>   <input id="science" type="number"  style="margin-left: 30px;"valur=""placeholder="Pls enter marks here"><br><br>
+             <label  style="margin-left: 30px;">Marks obtained in Hindi   :</label>   <input  id="hindi" style="margin-left: 42px;"type="number" valur=""placeholder="Pls enter marks here"><br><br>
+             <label  style="margin-left: 30px;">Marks obtained in Maths   :</label>   <input  id="maths" style="margin-left: 38px;"type="number" valur=""placeholder="Pls enter marks here"><br><br>
+             <label  style="margin-left: 30px;">Marks obtained in computer:</label>   <input   id="computer" style="margin-left: 20px;" type="number" valur=""placeholder="Pls enter marks here"><br><br>
+             <button style="margin-left: 180px;margin-top:20px" onclick="sum()">submit</button>
+         </div>
+         <div style="height:350px;width:500px;border:10px solid white;margin-top:50px;margin-left: 100px;color:white">
+     
+             <h4 id="result"style="margin-top:40px;margin-left:50px">Result:</h4>
+             <h4 id="marks" style="margin-left:30px;margin-left:50px">MARKS:</h4>
+             <h4 id="percentage" style="margin-left:50px">PERCENTAGE:</h4>
+             <h4 id="grade" style="margin-left:50px">GRADE:</h4>
+         </div>
+     
+         
+         </div>
+    
+
+
+        
+    
+    
+    </div>
+
+
+    </div>
+</body>
+</html>
